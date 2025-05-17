@@ -1,5 +1,5 @@
 import readline from "readline";
-import { IInvoiceHandler } from './IInvoiceHandler';  // Assuming you have this interface
+import type { IInvoiceHandler } from './IInvoiceHandler';  // Assuming you have this interface
 
 export class ConsoleInvoiceHandler implements IInvoiceHandler {
   private rl: readline.Interface;
@@ -24,7 +24,7 @@ export class ConsoleInvoiceHandler implements IInvoiceHandler {
   private async payInvoice(invoice: string): Promise<boolean> {
     console.log(`Attempting to pay invoice: ${invoice}`);
     // Implement the logic for paying an invoice here (you can replace this with actual logic like calling a payment gateway)
-    
+
     // Simulating success
     return true;  // Return true or false depending on the success of the payment
   }
